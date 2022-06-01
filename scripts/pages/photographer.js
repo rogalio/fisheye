@@ -20,6 +20,25 @@ async function displayData(photographers, media) {
       document.getElementById("mainTitle").textContent = photographers[i].name;
     }
   }
+  //afficher city
+  for (let i = 0; i < photographers.length; i++) {
+    if (photographers[i].id == ID) {
+      document.getElementById("city").textContent = photographers[i].city;
+    }
+  }
+  // aficher tagline
+  for (let i = 0; i < photographers.length; i++) {
+    if (photographers[i].id == ID) {
+      document.getElementById("tagline").textContent = photographers[i].tagline;
+    }
+  }
+  // afficher photo de profil
+  for (let i = 0; i < photographers.length; i++) {
+    if (photographers[i].id == ID) {
+      const avatar = document.getElementById("avatar");
+      avatar.setAttribute("src", photographers[i].portrait);
+    }
+  }
   //afficher media
   for (let i = 0; i < media.length; i++) {
     if (media[i].photographerId == ID) {
