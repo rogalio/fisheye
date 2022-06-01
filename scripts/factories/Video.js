@@ -18,10 +18,8 @@ class Video {
     div.appendChild(source);
     title.textContent = this.title;
     //remplacer image par asset/....
-    source.setAttribute("src", this.video);
-    image.setAttribute("type", "video/mp4");
+    source.setAttribute("src", `assets/images/${this.video}`);
+    source.setAttribute("type", "video/mp4");
     return div;
   }
 }
-
-// rajouter les images dans le dossier  images/photograpers

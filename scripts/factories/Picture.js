@@ -16,7 +16,7 @@ class Picture {
     div.appendChild(image);
     title.textContent = this.title;
     //remplacer image par asset/....
-    image.setAttribute("src", this.image);
+    image.setAttribute("src", `assets/images/${this.image}`);
     image.setAttribute("alt", this.title);
     return div;
   }
