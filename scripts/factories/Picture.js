@@ -9,9 +9,15 @@ class Picture {
     this.price = data.price;
   }
   createCard() {
-    <div>
-      <p id="titleOfMedia"></p>
-      <img src="" alt="" />
-    </div>;
+    const div = document.createElement("div");
+    const title = document.createElement("p");
+    const image = document.createElement("img");
+    div.appendChild(title);
+    div.appendChild(image);
+    title.textContent = this.title;
+    //remplacer image par asset/....
+    image.setAttribute("src", this.image);
+    image.setAttribute("alt", this.title);
+    return div;
   }
 }
