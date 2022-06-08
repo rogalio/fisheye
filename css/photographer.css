@@ -78,7 +78,13 @@ form input {
 .pictureMedia {
   height: 250px;
   object-fit: cover;
-  min-width: 250px;
+  width: 250px;
+}
+
+.videoMedia {
+  height: 250px;
+  object-fit: cover;
+  width: 250px;
 }
 
 .allMedia {
