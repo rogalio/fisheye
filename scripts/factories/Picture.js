@@ -14,6 +14,8 @@ class Picture {
     const image = document.createElement("img");
     div.appendChild(title);
     div.appendChild(image);
+    div.classList.add("allMedia");
+    image.classList.add("pictureMedia");
     title.textContent = this.title;
     //remplacer image par asset/....
     image.setAttribute("src", `assets/images/${this.image}`);

@@ -3,6 +3,7 @@
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
@@ -11,11 +12,15 @@
     <title>Fisheye</title>
   </head>
   <body>
-    <header>
-      <img src="assets/images/logo.png" class="logo" />
-      <h1>Nos photographes</h1>
+    <header
+      class="flex flex-row justify-between vertical-align: middle mx-auto mt-4"
+    >
+      <img class="h-12 ml-24" src="assets/images/logo.png" class="logo" />
+      <h1 class="text-[#911f1f] text-3xl mr-24 font-medium">
+        Nos photographes
+      </h1>
     </header>
-    <main id="main">
+    <main class="flex justify-center+" id="main">
       <div class="photographer_section"></div>
     </main>
     <script src="scripts/factories/Photographer.js"></script>

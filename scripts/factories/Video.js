@@ -15,6 +15,8 @@ class Video {
     const source = document.createElement("source");
     div.appendChild(title);
     div.appendChild(video);
+    div.classList.add("allMedia");
+    video.classList.add("videoMedia");
     div.appendChild(source);
     title.textContent = this.title;
     //remplacer image par asset/....

@@ -36,10 +36,10 @@ async function displayData(photographers, media) {
   for (let i = 0; i < photographers.length; i++) {
     if (photographers[i].id == ID) {
       const avatar = document.getElementById("avatar");
-      // avatar.setAttribute(
-      //   "src",
-      //   `assets/photographers/${photographers[i].portrait}`
-      // );
+      avatar.setAttribute(
+        "src",
+        `assets/photographers/${photographers[i].portrait}`
+      );
     }
   }
   //afficher media

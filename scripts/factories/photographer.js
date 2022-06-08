@@ -9,7 +9,7 @@ function photographerFactory(data) {
     const quote = document.createElement("p");
     const article = document.createElement("article");
     const img = document.createElement("img");
-    img.setAttribute("src", picture);
+    +img.setAttribute("src", picture);
     const h2 = document.createElement("h2");
     h2.textContent = name;
     const link = document.createElement("a");
@@ -18,10 +18,13 @@ function photographerFactory(data) {
     article.appendChild(img);
     article.appendChild(h2);
     cityOfWork.textContent = city;
+    cityOfWork.classList.add("city");
     article.appendChild(cityOfWork);
     quote.textContent = tagline;
+    quote.classList.add("quote");
     article.appendChild(quote);
     priceOfArtist.textContent = `${price}$/heure`;
+    priceOfArtist.classList.add("price");
     article.appendChild(priceOfArtist);
 
     return link;

@@ -3,6 +3,7 @@
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
@@ -11,20 +12,29 @@
     <title>Fisheye - photographe</title>
   </head>
   <body>
-    <header>
+    <header class="my-4">
       <a href="/">
-        <img src="assets/images/logo.png" class="logo" />
+        <img class="h-12 ml-24" src="assets/images/logo.png" class="logo" />
       </a>
     </header>
     <main id="main">
-      <div class="photograph-header">
-        <h1 id="mainTitle"></h1>
-        <p id="city"></p>
-        <p id="tagline"></p>
-        <img id="avatar" src="" alt="" />
+      <div
+        class="photograph-header bg-[#fafafa] h-[300px] my-0 mx-[100px] flex flex-row justify-between px-[50px] items-center"
+      >
+        <div class="flex flex-col justify-center">
+          <h1 id="mainTitle" class="text-4xl text-[#d56047]"></h1>
+          <p id="city" class="text-[#911f1f] text-lg"></p>
+          <p id="tagline"></p>
+        </div>
         <button class="contact_button" onclick="displayModal()">
           Contactez-moi
         </button>
+        <img
+          id="avatar"
+          class="rounded-full w-32 h-32 object-cover"
+          src=""
+          alt=""
+        />
       </div>
     </main>
     <div id="contact_modal">
@@ -44,7 +54,7 @@
         </form>
       </div>
     </div>
-    <div id="mediaGroup"></div>
+    <div id="mediaGroup" class="flex flex-row flex-vwrap gap-6 pt-6"></div>
     <script src="/scripts/factories/Picture.js"></script>
     <script src="/scripts/factories/Video.js"></script>
     <script src="/scripts/factories/MediaFactory.js"></script>
