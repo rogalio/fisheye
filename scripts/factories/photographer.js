@@ -9,7 +9,7 @@ function photographerFactory(data) {
     const quote = document.createElement("p");
     const article = document.createElement("article");
     const img = document.createElement("img");
-    +img.setAttribute("src", picture);
+    img.setAttribute("src", picture);
     const h2 = document.createElement("h2");
     h2.textContent = name;
     const link = document.createElement("a");

@@ -18,23 +18,8 @@ async function displayData(photographers, media) {
   for (let i = 0; i < photographers.length; i++) {
     if (photographers[i].id == ID) {
       document.getElementById("mainTitle").textContent = photographers[i].name;
-    }
-  }
-  //afficher city
-  for (let i = 0; i < photographers.length; i++) {
-    if (photographers[i].id == ID) {
       document.getElementById("city").textContent = photographers[i].city;
-    }
-  }
-  // aficher tagline
-  for (let i = 0; i < photographers.length; i++) {
-    if (photographers[i].id == ID) {
       document.getElementById("tagline").textContent = photographers[i].tagline;
-    }
-  }
-  // afficher photo de profil
-  for (let i = 0; i < photographers.length; i++) {
-    if (photographers[i].id == ID) {
       const avatar = document.getElementById("avatar");
       avatar.setAttribute(
         "src",
@@ -42,6 +27,7 @@ async function displayData(photographers, media) {
       );
     }
   }
+
   //afficher media
   const mediaGroup = document.getElementById("mediaGroup");
   for (let i = 0; i < media.length; i++) {

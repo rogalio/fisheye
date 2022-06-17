@@ -33,6 +33,8 @@ class Picture {
     number.addEventListener("click", () => {
       this.likes = this.likes + 1;
       numOfLikes.textContent = this.likes;
+      document.getElementById("likeBar").textContent =
+        Number(document.getElementById("likeBar").textContent) + 1;
     });
     number.appendChild(numOfLikes);
     like.classList.add("fa-solid", "fa-heart");
