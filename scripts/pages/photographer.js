@@ -1,3 +1,7 @@
+// variable
+const mediaPhotographer = [];
+const mediaGroup = document.getElementById("mediaGroup");
+
 async function getPhotographer() {
   //on cherche url + enleve ?
   const ID = window.location.search.substring(1);
@@ -11,6 +15,23 @@ async function getPhotographer() {
   let data = await response.json();
   return data;
 }
+
+// afficher le filter
+const filterPop = document.getElementById("pop");
+const filterDate = document.getElementById("date");
+const filterTitle = document.getElementById("title");
+
+// filter popularité
+filterPop.addEventListener("click", () => {
+  mediaPhotographer.sort((a, b) => {
+    return b.likes - a.likes;
+  });
+
+  mediaGroup.innerHTML = "";
+  mediaPhotographer.forEach((media) => {
+    mediaGroup.appendChild(media.createCard());
+  });
+});
 
 async function displayData(photographers, media) {
   const ID = window.location.search.substring(1);
@@ -35,6 +56,7 @@ async function displayData(photographers, media) {
       // afficher les medias
       let mediaReceive = new MediaFactory(media[i]);
       mediaGroup.appendChild(mediaReceive.createCard());
+      mediaPhotographer.push(mediaReceive);
     }
   }
 }

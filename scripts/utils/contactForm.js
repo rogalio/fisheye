@@ -10,6 +10,7 @@ const closeModal = document.getElementById("closeModal");
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
 });
+
 // submit form
 const form = document.getElementById("form");
 const first = document.getElementById("first");
