@@ -18,8 +18,8 @@ class Picture {
     // transfirler en nombres
     document.getElementById("likeBar").textContent =
       Number(document.getElementById("likeBar").textContent) + this.likes;
-    div.appendChild(title);
     div.appendChild(image);
+    div.appendChild(title);
     div.classList.add("allMedia");
     image.classList.add("pictureMedia");
 
@@ -41,5 +41,16 @@ class Picture {
     number.appendChild(numOfLikes);
     like.classList.add("fa-solid", "fa-heart");
     return div;
+
+    // // creeate listener
+  }
+
+  createCardLightBox() {
+    const figure = document.createElement("figure");
+    const picture = document.createElement("img");
+    const title = document.createElement("figcaption");
+    figure.appendChild(picture);
+    figure.appendChild(title);
+    return figure;
   }
 }

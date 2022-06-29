@@ -44,4 +44,13 @@ class Video {
     like.classList.add("fa-solid", "fa-heart");
     return div;
   }
+
+  createCardLightBox() {
+    const figure = document.createElement("figure");
+    const video = document.createElement("video");
+    const title = document.createElement("figcaption");
+    figure.appendChild(video);
+    figure.appendChild(title);
+    return figure;
+  }
 }

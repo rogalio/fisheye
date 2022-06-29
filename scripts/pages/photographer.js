@@ -36,8 +36,7 @@ filterPop.addEventListener("click", () => {
 // filtrer date
 filterDate.addEventListener("click", () => {
   mediaPhotographer.sort((a, b) => {
-    console.log(a.date);
-    return b.date - a.date;
+    return new Date(b.date) - new Date(a.date);
   });
 
   mediaGroup.innerHTML = "";
@@ -84,14 +83,18 @@ async function displayData(photographers, media) {
       mediaPhotographer.push(mediaReceive);
     }
   }
+  Lightbox.mediaFill(mediaPhotographer);
 
   //afficher prix/heure
   const workHour = document.getElementById("likeBar");
   for (let i = 0; i < photographers.length; i++) {
     if (photographers[i].id == ID) {
       const info = document.createElement("p");
+      const iconLike = document.createElement("i");
       workHour.appendChild(info);
+      workHour.appendChild(iconLike);
       info.textContent = `${photographers[i].price}$/heure`;
+      iconLike.classList.add("fa-solid", "fa-heart", "w-2");
     }
   }
 }
