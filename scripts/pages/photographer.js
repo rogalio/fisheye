@@ -33,6 +33,31 @@ filterPop.addEventListener("click", () => {
   });
 });
 
+// filtrer date
+filterDate.addEventListener("click", () => {
+  mediaPhotographer.sort((a, b) => {
+    console.log(a.date);
+    return b.date - a.date;
+  });
+
+  mediaGroup.innerHTML = "";
+  mediaPhotographer.forEach((media) => {
+    mediaGroup.appendChild(media.createCard());
+  });
+});
+
+// filter titre
+filterTitle.addEventListener("click", () => {
+  mediaPhotographer.sort((a, b) => {
+    return a.title.localeCompare(b.title);
+  });
+
+  mediaGroup.innerHTML = "";
+  mediaPhotographer.forEach((media) => {
+    mediaGroup.appendChild(media.createCard());
+  });
+});
+
 async function displayData(photographers, media) {
   const ID = window.location.search.substring(1);
   // aficher nom
@@ -57,6 +82,16 @@ async function displayData(photographers, media) {
       let mediaReceive = new MediaFactory(media[i]);
       mediaGroup.appendChild(mediaReceive.createCard());
       mediaPhotographer.push(mediaReceive);
+    }
+  }
+
+  //afficher prix/heure
+  const workHour = document.getElementById("likeBar");
+  for (let i = 0; i < photographers.length; i++) {
+    if (photographers[i].id == ID) {
+      const info = document.createElement("p");
+      workHour.appendChild(info);
+      info.textContent = `${photographers[i].price}$/heure`;
     }
   }
 }

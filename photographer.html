@@ -23,17 +23,19 @@
     </header>
     <main id="main">
       <div
-        class="photograph-header bg-[#fafafa] h-[300px] my-0 mx-[100px] flex flex-row justify-between px-[50px] items-center"
+        class="photograph-header py-5 flex-col-reverse bg-[#fafafa] h-[350px] my-0 mx-[100px] flex space-y-3 space-x-3 md:flex-row justify-around px-[50px] items-center"
       >
-        <div class="flex flex-col justify-center">
-          <h1 id="mainTitle" class="text-4xl text-[#d56047]"></h1>
+        <div class="flex flex-col justify-center w-max">
+          <h1 id="mainTitle" class="text-2xl text-[#d56047] md:text-4xl"></h1>
           <p id="city" class="text-[#911f1f] text-lg"></p>
           <p id="tagline"></p>
         </div>
-        <button id="form_modal" class="contact_button">Contactez-moi</button>
+        <button id="form_modal" class="contact_button text-sm h-14">
+          Contactez-moi
+        </button>
         <img
           id="avatar"
-          class="rounded-full w-32 h-32 object-cover"
+          class="rounded-full w-24 h-24 object-cover"
           src=""
           alt=""
         />
@@ -65,16 +67,25 @@
         </form>
       </div>
     </div>
-    <div class="flex">
-      <p>Trier par</p>
-      <ul>
-        <li id="pop">PoPularité</li>
-        <li id="date">Date</li>
-        <li id="title">Titre</li>
+    <div class="flex mt-10 mx-10 relative">
+      <p class="mr-10">Trier par</p>
+
+      <ul class="bg-[#901c1c] p-4 text-white flex absolute left-20">
+        <div>
+          <li id="pop">PoPularité</li>
+          <li id="date">Date</li>
+          <li id="title">Titre</li>
+        </div>
       </ul>
     </div>
-    <div id="mediaGroup" class="flex flex-row flex-wrap gap-6 pt-6"></div>
-    <div class="likeBar" id="likeBar"></div>
+    <div
+      id="mediaGroup"
+      class="flex flex-row flex-wrap gap-6 pt-6 justify-center"
+    ></div>
+    <div
+      class="likeBar fixed bottom-0 right-10 bg-[#d56047] px-4 py-2 rounded-md flex gap-4 font-semibold"
+      id="likeBar"
+    ></div>
     <script src="/scripts/factories/Picture.js"></script>
     <script src="/scripts/factories/Video.js"></script>
     <script src="/scripts/factories/MediaFactory.js"></script>

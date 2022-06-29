@@ -22,10 +22,12 @@ class Picture {
     div.appendChild(image);
     div.classList.add("allMedia");
     image.classList.add("pictureMedia");
-    title.textContent = this.title;
+
     //remplacer image par asset/....
     image.setAttribute("src", `assets/images/${this.image}`);
     image.setAttribute("alt", this.title);
+    //ajouter text
+    title.textContent = this.title;
     // creer nombre  + coeur
     div.appendChild(number);
     number.appendChild(like);
