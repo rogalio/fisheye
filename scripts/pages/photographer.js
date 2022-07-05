@@ -23,6 +23,7 @@ const filterTitle = document.getElementById("title");
 
 // filter popularité
 filterPop.addEventListener("click", () => {
+  console.log("hello");
   mediaPhotographer.sort((a, b) => {
     return b.likes - a.likes;
   });
@@ -47,6 +48,7 @@ filterDate.addEventListener("click", () => {
 
 // filter titre
 filterTitle.addEventListener("click", () => {
+  console.log("hello");
   mediaPhotographer.sort((a, b) => {
     return a.title.localeCompare(b.title);
   });
@@ -85,18 +87,35 @@ async function displayData(photographers, media) {
   }
   Lightbox.mediaFill(mediaPhotographer);
 
-  //afficher prix/heure
+  //afficher prix/heure et icone
   const workHour = document.getElementById("likeBar");
   for (let i = 0; i < photographers.length; i++) {
     if (photographers[i].id == ID) {
       const info = document.createElement("p");
       const iconLike = document.createElement("i");
-      workHour.appendChild(info);
       workHour.appendChild(iconLike);
+      workHour.appendChild(info);
       info.textContent = `${photographers[i].price}$/heure`;
-      iconLike.classList.add("fa-solid", "fa-heart", "w-2");
+      iconLike.classList.add(
+        "fa-solid",
+        "fa-heart",
+        "w-2",
+        "flex",
+        "items-center"
+      );
     }
   }
+
+  // close filter
+  const closeFilter = document.getElementById("closeFilter");
+  const filterGroup = document.getElementById("filterGroup");
+  closeFilter.addEventListener("click", () => {
+    if (filterGroup.style.display != "none") {
+      filterGroup.style.display = "none";
+    } else {
+      filterGroup.style.display = "block";
+    }
+  });
 }
 
 async function init() {

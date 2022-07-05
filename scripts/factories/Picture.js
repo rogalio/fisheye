@@ -10,6 +10,7 @@ class Picture {
   }
   createCard() {
     const div = document.createElement("div");
+    const div2 = document.createElement("div");
     const title = document.createElement("p");
     const image = document.createElement("img");
     const number = document.createElement("span");
@@ -19,17 +20,20 @@ class Picture {
     document.getElementById("likeBar").textContent =
       Number(document.getElementById("likeBar").textContent) + this.likes;
     div.appendChild(image);
-    div.appendChild(title);
+    div.appendChild(div2);
+    div2.appendChild(title);
+    div2.classList.add("flex", "justify-between");
     div.classList.add("allMedia");
     image.classList.add("pictureMedia");
 
     //remplacer image par asset/....
     image.setAttribute("src", `assets/images/${this.image}`);
     image.setAttribute("alt", this.title);
-    //ajouter text
+    //ajouter titre
     title.textContent = this.title;
+
     // creer nombre  + coeur
-    div.appendChild(number);
+    div2.appendChild(number);
     number.appendChild(like);
     // ajout click
     number.addEventListener("click", () => {

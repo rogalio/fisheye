@@ -43,38 +43,51 @@
     </main>
     <div id="contact_modal">
       <div class="modal">
-        <header>
-          <h2>Contactez-moi</h2>
+        <header class="flex justify-between gap-4">
+          <h2 class="text-[30px]">Contactez-moi</h2>
 
-          <img src="assets/icons/close.svg" id="closeModal" />
+          <img src="assets/icons/close.svg" id="closeModal" class="w-6" />
         </header>
         <form id="form">
           <div>
-            <p>hello</p>
-            <label for="first">Prénom</label>
-            <input type="text" id="first" />
+            <label class="text-xl" for="first">Prénom</label>
+            <input class="h-8" type="text" id="first" />
 
-            <label for="last">Nom</label>
-            <input type="text" id="last" />
+            <label class="text-xl" for="last">Nom</label>
+            <input class="h-8" type="text" id="last" />
 
-            <label for="email">email</label>
-            <input type="email" id="email" />
+            <label class="text-xl" for="email">email</label>
+            <input class="h-8" type="email" id="email" />
 
-            <label for="message">Message</label>
-            <textarea id="message"> </textarea>
+            <label class="text-xl" for="message">Message</label>
+            <textarea class="h-8 w-full" id="message"> </textarea>
           </div>
-          <button type="submit" class="contact_button">Envoyer</button>
+          <button
+            type="submit"
+            class="contact_button bg-[#911f1f] h-9 flex items-center justify-center"
+          >
+            Envoyer
+          </button>
         </form>
       </div>
     </div>
     <div class="flex mt-10 mx-10 relative">
-      <p class="mr-10">Trier par</p>
+      <p class="mr-10 font-semibold">Trier par</p>
 
-      <ul class="bg-[#901c1c] p-4 text-white flex absolute left-20">
-        <div>
-          <li id="pop">PoPularité</li>
-          <li id="date">Date</li>
-          <li id="title">Titre</li>
+      <ul
+        class="bg-[#901c1c] p-2 text-white flex absolute left-20 min-h-[30px] z-10"
+      >
+        <div class="flex flex-col relative w-24">
+          <p class="text-sm">Filters</p>
+          <i
+            id="closeFilter"
+            class="fa-solid fa-diagram-predecessor right-0 absolute"
+          ></i>
+          <div id="filterGroup">
+            <li class="mt-4" id="pop">PoPularité</li>
+            <li id="date">Date</li>
+            <li id="title">Titre</li>
+          </div>
         </div>
       </ul>
     </div>
