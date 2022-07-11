@@ -16,6 +16,12 @@ class Picture {
     const number = document.createElement("span");
     const like = document.createElement("i");
     const numOfLikes = document.createTextNode(this.likes);
+
+    // au click sur image lightbox
+    image.addEventListener("click", () => {
+      new Lightbox(this.id);
+    });
+
     // transfirler en nombres
     document.getElementById("likeBar").textContent =
       Number(document.getElementById("likeBar").textContent) + this.likes;
@@ -45,8 +51,6 @@ class Picture {
     number.appendChild(numOfLikes);
     like.classList.add("fa-solid", "fa-heart");
     return div;
-
-    // // creeate listener
   }
 
   createCardLightBox() {
@@ -55,6 +59,8 @@ class Picture {
     const title = document.createElement("figcaption");
     figure.appendChild(picture);
     figure.appendChild(title);
+    picture.setAttribute("src", `assets/images/${this.image}`);
+
     return figure;
   }
 }
