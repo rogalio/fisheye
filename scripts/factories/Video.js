@@ -17,7 +17,13 @@ class Video {
     const number = document.createElement("span");
     const like = document.createElement("i");
     const numOfLikes = document.createTextNode(this.likes);
-    // transfirler en nombres
+
+    // au click sur image lightbox
+    video.addEventListener("click", () => {
+      new Lightbox(this.id);
+    });
+
+    // transferer en nombres
     document.getElementById("likeBar").textContent =
       Number(document.getElementById("likeBar").textContent) + this.likes;
     div.appendChild(video);
@@ -54,6 +60,7 @@ class Video {
     const title = document.createElement("figcaption");
     figure.appendChild(video);
     figure.appendChild(title);
+    video.setAttribute("src", `assets/images/${this.video}`);
     return figure;
   }
 }

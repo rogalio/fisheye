@@ -22,6 +22,19 @@ class Picture {
       new Lightbox(this.id);
     });
 
+    // image.addEventListener(
+    //   "click",
+    //   function () {
+    //     new Lightbox(this.id);
+    //   },
+    //   { once: true }
+    // );
+    // function popup() {
+    //   new Lightbox(this.id);
+    //   removeEventListener("click", popup);
+    // }
+    // addEventListener("click", popup);
+
     // transfirler en nombres
     document.getElementById("likeBar").textContent =
       Number(document.getElementById("likeBar").textContent) + this.likes;
