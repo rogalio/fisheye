@@ -22,19 +22,6 @@ class Picture {
       new Lightbox(this.id);
     });
 
-    // image.addEventListener(
-    //   "click",
-    //   function () {
-    //     new Lightbox(this.id);
-    //   },
-    //   { once: true }
-    // );
-    // function popup() {
-    //   new Lightbox(this.id);
-    //   removeEventListener("click", popup);
-    // }
-    // addEventListener("click", popup);
-
     // transfirler en nombres
     document.getElementById("likeBar").textContent =
       Number(document.getElementById("likeBar").textContent) + this.likes;
@@ -68,9 +55,12 @@ class Picture {
 
   createCardLightBox() {
     const figure = document.createElement("figure");
+    const customBox = document.getElementById("customInfo");
     const picture = document.createElement("img");
     const title = document.createElement("figcaption");
+    customBox.classList.add("w-full", "h-[600px]", "top-[500px]", "fixed");
     figure.appendChild(picture);
+    picture.classList.add("w-full", "h-[600px]", "object-cover");
     figure.appendChild(title);
     picture.setAttribute("src", `assets/images/${this.image}`);
 

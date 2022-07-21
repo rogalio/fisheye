@@ -72,6 +72,7 @@ async function displayData(photographers, media) {
         "src",
         `assets/photographers/${photographers[i].portrait}`
       );
+      avatar.setAttribute("alt", photographers[i].name);
     }
   }
 

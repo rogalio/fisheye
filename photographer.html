@@ -99,11 +99,20 @@
       class="likeBar fixed bottom-0 right-10 bg-[#d56047] px-4 py-2 rounded-md flex gap-4 font-semibold"
       id="likeBar"
     ></div>
-    <div id="modalLightBox" class="top-[40%] w-[80%] fixed h-40">
+    <div id="modalLightBox" class="">
       <div class="" id="customInfo">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <i id="right" class="fa-solid fa-chevron-right"></i>
-        <i id="closeLightbox" class="fa-solid fa-xmark"></i>
+        <i
+          id="left"
+          class="fa-solid fa-angle-left absolute z-50 top-1/2 left-4 text-white text-2xl"
+        ></i>
+        <i
+          id="right"
+          class="fa-solid fa-chevron-right absolute z-50 top-1/2 right-4 text-white text-2xl"
+        ></i>
+        <i
+          id="closeLightbox"
+          class="fa-solid fa-xmark absolute z-50 top-2 right-4 text-white text-2xl"
+        ></i>
       </div>
     </div>
     <script src="/scripts/utils/LightBox.js"></script>

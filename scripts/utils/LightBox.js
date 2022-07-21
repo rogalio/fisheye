@@ -35,13 +35,17 @@ class Lightbox {
       .appendChild(Lightbox.medias[this.index].createCardLightBox());
 
     // aler a droite
-    const right = document.getElementById("right");
+    const rightIcon = document.getElementById("right");
+    const closeIcon = document.getElementById("closeLightbox");
     right.addEventListener("click", () => {
       this.index = (this.index + 1) % Lightbox.medias.length;
       document.getElementById("customInfo").innerHTML = "";
       document
         .getElementById("customInfo")
         .appendChild(Lightbox.medias[this.index].createCardLightBox());
+      document.getElementById("customInfo").appendChild(rightIcon);
+      document.getElementById("customInfo").appendChild(left);
+      document.getElementById("customInfo").appendChild(closeIcon);
     });
 
     // aller a gauche f
@@ -54,13 +58,16 @@ class Lightbox {
       document
         .getElementById("customInfo")
         .appendChild(Lightbox.medias[this.index].createCardLightBox());
+      document.getElementById("customInfo").appendChild(rightIcon);
+      document.getElementById("customInfo").appendChild(left);
+      document.getElementById("customInfo").appendChild(closeIcon);
     });
 
     // fermer le lightgox
-    const close = document.getElementById("closeLightbox");
-    close.addEventListener("click", () => {
+    closeIcon.addEventListener("click", () => {
       modalLightBox.style.display = "none";
     });
+    document.getElementById("customInfo").appendChild(closeIcon);
   }
 
   static mediaFill(mediaPhotographer) {
