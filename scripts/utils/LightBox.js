@@ -43,9 +43,6 @@ class Lightbox {
       document
         .getElementById("customInfo")
         .appendChild(Lightbox.medias[this.index].createCardLightBox());
-      document.getElementById("customInfo").appendChild(rightIcon);
-      document.getElementById("customInfo").appendChild(left);
-      document.getElementById("customInfo").appendChild(closeIcon);
     });
 
     // aller a gauche f
@@ -58,16 +55,12 @@ class Lightbox {
       document
         .getElementById("customInfo")
         .appendChild(Lightbox.medias[this.index].createCardLightBox());
-      document.getElementById("customInfo").appendChild(rightIcon);
-      document.getElementById("customInfo").appendChild(left);
-      document.getElementById("customInfo").appendChild(closeIcon);
     });
 
     // fermer le lightgox
     closeIcon.addEventListener("click", () => {
       modalLightBox.style.display = "none";
     });
-    document.getElementById("customInfo").appendChild(closeIcon);
   }
 
   static mediaFill(mediaPhotographer) {

@@ -19,13 +19,13 @@ function photographerFactory(data) {
     article.appendChild(img);
     article.appendChild(h2);
     cityOfWork.textContent = city;
-    cityOfWork.classList.add("city");
+    cityOfWork.classList.add("city", "text-[#901C1C]");
     article.appendChild(cityOfWork);
     quote.textContent = tagline;
     quote.classList.add("quote");
     article.appendChild(quote);
     priceOfArtist.textContent = `${price}$/heure`;
-    priceOfArtist.classList.add("price");
+    priceOfArtist.classList.add("price", "text-[#525252]");
     article.appendChild(priceOfArtist);
 
     return link;

@@ -42,16 +42,8 @@ body {
   border-radius: 50%;
 }
 
-.photographer_section article .city {
-  color: #d3573c;
-}
-
 .photographer_section article .quote {
   font-weight: 600;
-}
-
-.photographer_section article .price {
-  color: grey;
 }
 
 @tailwind base;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
@@ -18,7 +18,12 @@
   <body>
     <header class="my-4">
       <a href="/">
-        <img class="h-12 ml-24" src="assets/images/logo.png" class="logo" />
+        <img
+          class="h-12 ml-24"
+          src="assets/images/logo.png"
+          class="logo"
+          alt="logoFishEyes"
+        />
       </a>
     </header>
     <main id="main">
@@ -37,7 +42,7 @@
           id="avatar"
           class="rounded-full w-24 h-24 object-cover"
           src=""
-          alt=""
+          alt="avatar"
         />
       </div>
     </main>
@@ -46,7 +51,12 @@
         <header class="flex justify-between gap-4">
           <h2 class="text-[30px]">Contactez-moi</h2>
 
-          <img src="assets/icons/close.svg" id="closeModal" class="w-6" />
+          <img
+            src="assets/icons/close.svg"
+            id="closeModal"
+            class="w-6"
+            alt="close"
+          />
         </header>
         <form id="form">
           <div>
@@ -99,21 +109,24 @@
       class="likeBar fixed bottom-0 right-10 bg-[#d56047] px-4 py-2 rounded-md flex gap-4 font-semibold"
       id="likeBar"
     ></div>
-    <div id="modalLightBox" class="">
-      <div class="" id="customInfo">
-        <i
-          id="left"
-          class="fa-solid fa-angle-left absolute z-50 top-1/2 left-4 text-white text-2xl"
-        ></i>
-        <i
-          id="right"
-          class="fa-solid fa-chevron-right absolute z-50 top-1/2 right-4 text-white text-2xl"
-        ></i>
-        <i
-          id="closeLightbox"
-          class="fa-solid fa-xmark absolute z-50 top-2 right-4 text-white text-2xl"
-        ></i>
-      </div>
+    <div
+      id="modalLightBox"
+      style="display: none"
+      class="fixed w-full h-[600px] top-1/3 fixed"
+    >
+      <i
+        id="left"
+        class="fa-solid fa-angle-left absolute z-50 top-1/2 left-4 text-black text-3xl"
+      ></i>
+      <i
+        id="right"
+        class="fa-solid fa-chevron-right absolute z-50 top-1/2 right-4 text-black text-3xl"
+      ></i>
+      <i
+        id="closeLightbox"
+        class="fa-solid fa-xmark absolute z-50 top-2 right-4 text-black text-2xl"
+      ></i>
+      <div id="customInfo" class="bg-white"></div>
     </div>
     <script src="/scripts/utils/LightBox.js"></script>
     <script src="/scripts/factories/Picture.js"></script>

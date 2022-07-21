@@ -58,9 +58,8 @@ class Picture {
     const customBox = document.getElementById("customInfo");
     const picture = document.createElement("img");
     const title = document.createElement("figcaption");
-    customBox.classList.add("w-full", "h-[600px]", "top-[500px]", "fixed");
     figure.appendChild(picture);
-    picture.classList.add("w-full", "h-[600px]", "object-cover");
+    picture.classList.add("w-4/5", "object-cover", "mx-auto", "block");
     figure.appendChild(title);
     picture.setAttribute("src", `assets/images/${this.image}`);
 
