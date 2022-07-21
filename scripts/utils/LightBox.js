@@ -44,7 +44,7 @@ class Lightbox {
         .appendChild(Lightbox.medias[this.index].createCardLightBox());
     });
 
-    // aller a gauche
+    // aller a gauche f
     const left = document.getElementById("left");
     left.addEventListener("click", () => {
       this.index =
