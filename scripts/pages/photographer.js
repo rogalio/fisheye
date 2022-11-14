@@ -23,6 +23,7 @@ const filterTitle = document.getElementById("title");
 
 // filter popularité
 filterPop.addEventListener("click", () => {
+  closeFilter.click();
   console.log("hello");
   mediaPhotographer.sort((a, b) => {
     return b.likes - a.likes;
@@ -36,6 +37,7 @@ filterPop.addEventListener("click", () => {
 
 // filtrer date
 filterDate.addEventListener("click", () => {
+  closeFilter.click();
   mediaPhotographer.sort((a, b) => {
     return new Date(b.date) - new Date(a.date);
   });
@@ -48,6 +50,7 @@ filterDate.addEventListener("click", () => {
 
 // filter titre
 filterTitle.addEventListener("click", () => {
+  closeFilter.click();
   console.log("hello");
   mediaPhotographer.sort((a, b) => {
     return a.title.localeCompare(b.title);
@@ -111,11 +114,7 @@ async function displayData(photographers, media) {
   const closeFilter = document.getElementById("closeFilter");
   const filterGroup = document.getElementById("filterGroup");
   closeFilter.addEventListener("click", () => {
-    if (filterGroup.style.display != "none") {
-      filterGroup.style.display = "none";
-    } else {
-      filterGroup.style.display = "block";
-    }
+    filterGroup.classList.toggle("hidden");
   });
 }
 

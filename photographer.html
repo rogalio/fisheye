@@ -35,18 +35,18 @@
           <p id="city" class="text-[#911f1f] text-lg"></p>
           <p id="tagline"></p>
         </div>
-        <button id="form_modal" class="contact_button text-sm h-14">
+        <button id="form_modal" class="text-sm contact_button h-14">
           Contactez-moi
         </button>
         <img
           id="avatar"
-          class="rounded-full w-24 h-24 object-cover"
+          class="object-cover w-24 h-24 rounded-full"
           src=""
           alt="avatar"
         />
       </div>
     </main>
-    <div id="contact_modal">
+    <div id="contact_modal" class="absolute z-50 w-full">
       <div class="modal">
         <header class="flex justify-between gap-4">
           <h2 class="text-[30px]">Contactez-moi</h2>
@@ -70,7 +70,7 @@
             <input class="h-8" type="email" id="email" />
 
             <label class="text-xl" for="message">Message</label>
-            <textarea class="h-8 w-full" id="message"> </textarea>
+            <textarea class="w-full h-8" id="message"> </textarea>
           </div>
           <button
             type="submit"
@@ -81,29 +81,31 @@
         </form>
       </div>
     </div>
-    <div class="flex mt-10 mx-10 relative">
+    <div class="relative flex mx-10 mt-10">
       <p class="mr-10 font-semibold">Trier par</p>
 
-      <ul
+      <div
         class="bg-[#901c1c] p-2 text-white flex absolute left-20 min-h-[30px] z-10"
       >
-        <div class="flex flex-col relative w-24">
+        <div class="relative flex flex-col w-24">
           <p class="text-sm">Filters</p>
           <i
             id="closeFilter"
-            class="fa-solid fa-diagram-predecessor right-0 absolute"
+            class="absolute right-0 fa-solid fa-diagram-predecessor"
           ></i>
-          <div id="filterGroup">
-            <li class="mt-4" id="pop">PoPularité</li>
-            <li id="date">Date</li>
-            <li id="title">Titre</li>
+          <div id="filterGroup" class="hidden">
+            <ul>
+              <li class="mt-4" id="pop">PoPularité</li>
+              <li id="date">Date</li>
+              <li id="title">Titre</li>
+            </ul>
           </div>
         </div>
-      </ul>
+      </div>
     </div>
     <div
       id="mediaGroup"
-      class="flex flex-row flex-wrap gap-6 pt-6 justify-center"
+      class="flex flex-row flex-wrap justify-center gap-6 pt-6"
     ></div>
     <div
       class="likeBar fixed bottom-0 right-10 bg-[#d56047] px-4 py-2 rounded-md flex gap-4 font-semibold"
@@ -112,19 +114,19 @@
     <div
       id="modalLightBox"
       style="display: none"
-      class="fixed w-full h-[600px] top-1/3 fixed"
+      class="w-full h-[600px] top-1/3 fixed"
     >
       <i
         id="left"
-        class="fa-solid fa-angle-left absolute z-50 top-1/2 left-4 text-black text-3xl"
+        class="absolute z-50 text-3xl text-black fa-solid fa-angle-left top-1/2 left-4"
       ></i>
       <i
         id="right"
-        class="fa-solid fa-chevron-right absolute z-50 top-1/2 right-4 text-black text-3xl"
+        class="absolute z-50 text-3xl text-black fa-solid fa-chevron-right top-1/2 right-4"
       ></i>
       <i
         id="closeLightbox"
-        class="fa-solid fa-xmark absolute z-50 top-2 right-4 text-black text-2xl"
+        class="absolute z-50 text-2xl text-black fa-solid fa-xmark top-2 right-4"
       ></i>
       <div id="customInfo" class="bg-white"></div>
     </div>

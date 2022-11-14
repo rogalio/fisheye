@@ -9,6 +9,7 @@ contactButton.addEventListener("click", () => {
 const closeModal = document.getElementById("closeModal");
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
+  console.log("test");
 });
 
 // submit form

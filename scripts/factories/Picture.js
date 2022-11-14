@@ -15,7 +15,7 @@ class Picture {
     const image = document.createElement("img");
     const number = document.createElement("span");
     const like = document.createElement("i");
-    const numOfLikes = document.createTextNode(this.likes);
+    // const numOfLikes = document.createTextNode(this.likes);
 
     // au click sur image lightbox
     image.addEventListener("click", () => {
@@ -23,8 +23,8 @@ class Picture {
     });
 
     // transfirler en nombres
-    document.getElementById("likeBar").textContent =
-      Number(document.getElementById("likeBar").textContent) + this.likes;
+    // document.getElementById("likeBar").textContent =
+    //   Number(document.getElementById("likeBar").textContent) + this.likes;
     div.appendChild(image);
     div.appendChild(div2);
     div2.appendChild(title);
@@ -48,7 +48,7 @@ class Picture {
       document.getElementById("likeBar").textContent =
         Number(document.getElementById("likeBar").textContent) + 1;
     });
-    number.appendChild(numOfLikes);
+    // number.appendChild(numOfLikes);
     like.classList.add("fa-solid", "fa-heart");
     return div;
   }
