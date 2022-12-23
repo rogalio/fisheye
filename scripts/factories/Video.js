@@ -24,8 +24,9 @@ class Video {
     });
 
     // transferer en nombres
-    document.getElementById("likeBar").textContent =
-      Number(document.getElementById("likeBar").textContent) + this.likes;
+    document.getElementById("likeBarContent").textContent =
+      Number(document.getElementById("likeBarContent").textContent) +
+      this.likes;
     div.appendChild(video);
     div.appendChild(div2);
     div.classList.add("allMedia");
@@ -46,8 +47,8 @@ class Video {
       this.likes = this.likes + 1;
       numOfLikes.textContent = this.likes;
       // add to likebar
-      document.getElementById("likeBar").textContent =
-        Number(document.getElementById("likeBar").textContent) + 1;
+      document.getElementById("likeBarContent").textContent =
+        Number(document.getElementById("likeBarContent").textContent) + 1;
     });
     number.appendChild(numOfLikes);
     like.classList.add("fa-solid", "fa-heart");

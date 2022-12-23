@@ -92,6 +92,7 @@
           <i
             id="closeFilter"
             class="absolute right-0 fa-solid fa-diagram-predecessor"
+            aria-label="Fermer la modal"
           ></i>
           <div id="filterGroup" class="hidden">
             <ul>
@@ -110,7 +111,9 @@
     <div
       class="likeBar fixed bottom-0 right-10 bg-[#d56047] px-4 py-2 rounded-md flex gap-4 font-semibold"
       id="likeBar"
-    ></div>
+    >
+      <span id="likeBarContent"></span>
+    </div>
     <div
       id="modalLightBox"
       style="display: none"
@@ -119,14 +122,17 @@
       <i
         id="left"
         class="absolute z-50 text-3xl text-black fa-solid fa-angle-left top-1/2 left-4"
+        aria-label="Précédent"
       ></i>
       <i
         id="right"
         class="absolute z-50 text-3xl text-black fa-solid fa-chevron-right top-1/2 right-4"
+        aria-label="Suivant"
       ></i>
       <i
         id="closeLightbox"
         class="absolute z-50 text-2xl text-black fa-solid fa-xmark top-2 right-4"
+        aria-label="Fermer la modal"
       ></i>
       <div id="customInfo" class="bg-white"></div>
     </div>
