@@ -22,6 +22,8 @@ class Picture {
       new Lightbox(this.id);
     });
 
+
+ 
     // transfirler en nombres
     document.getElementById("likeBarContent").textContent =
       Number(document.getElementById("likeBarContent").textContent) +
@@ -32,6 +34,7 @@ class Picture {
     div2.classList.add("flex", "justify-between");
     div.classList.add("allMedia");
     image.classList.add("pictureMedia");
+    image.setAttribute("tabindex", "2");
 
     //remplacer image par asset/....
     image.setAttribute("src", `assets/images/${this.image}`);
@@ -43,12 +46,17 @@ class Picture {
     div2.appendChild(number);
     number.appendChild(like);
     // ajout click
-    number.addEventListener("click", () => {
-      this.likes = this.likes + 1;
-      numOfLikes.textContent = this.likes;
-      document.getElementById("likeBarContent").textContent =
+    number.addEventListener("click", (event) => {
+      const target = event.currentTarget
+      if (!target.classList.contains("like")) {
+        this.likes = this.likes + 1;
+        numOfLikes.textContent = this.likes;
+        document.getElementById("likeBarContent").textContent =
         Number(document.getElementById("likeBarContent").textContent) + 1;
-    });
+        target.classList.add("like")
+      }
+    })
+
     number.appendChild(numOfLikes);
     like.classList.add("fa-solid", "fa-heart");
     return div;
@@ -56,6 +64,7 @@ class Picture {
 
   createCardLightBox() {
     const figure = document.createElement("figure");
+    
     const customBox = document.getElementById("customInfo");
     const picture = document.createElement("img");
     const title = document.createElement("figcaption");
@@ -66,4 +75,15 @@ class Picture {
 
     return figure;
   }
+
+
 }
+    // click lightbox on tab
+    document.body.onkeyup = function(e) {
+      if (e.key == " " ||
+          e.code == "Space" ||      
+          e.keyCode == 32      
+      ) {
+        document.activeElement.click();
+      }
+    }

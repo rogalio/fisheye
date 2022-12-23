@@ -35,7 +35,7 @@
           <p id="city" class="text-[#911f1f] text-lg"></p>
           <p id="tagline"></p>
         </div>
-        <button id="form_modal" class="text-sm contact_button h-14">
+        <button id="form_modal" tabindex="1" class="text-sm contact_button h-14">
           Contactez-moi
         </button>
         <img
@@ -88,7 +88,7 @@
         class="bg-[#901c1c] p-2 text-white flex absolute left-20 min-h-[30px] z-10"
       >
         <div class="relative flex flex-col w-24">
-          <p class="text-sm">Filters</p>
+          <p class="text-sm"  >Filters</p>
           <i
             id="closeFilter"
             class="absolute right-0 fa-solid fa-diagram-predecessor"
@@ -96,8 +96,8 @@
           ></i>
           <div id="filterGroup" class="hidden">
             <ul>
-              <li class="mt-4" id="pop">PoPularité</li>
-              <li id="date">Date</li>
+              <li  class="mt-4" id="pop">PoPularité</li>
+              <li  id="date">Date</li>
               <li id="title">Titre</li>
             </ul>
           </div>
@@ -105,6 +105,7 @@
       </div>
     </div>
     <div
+      
       id="mediaGroup"
       class="flex flex-row flex-wrap justify-center gap-6 pt-6"
     ></div>
