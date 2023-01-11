@@ -72,6 +72,7 @@ class Picture {
     picture.classList.add("w-4/5", "object-cover", "mx-auto", "block");
     figure.appendChild(title);
     picture.setAttribute("src", `assets/images/${this.image}`);
+    picture.setAttribute("alt", this.title);
 
     return figure;
   }

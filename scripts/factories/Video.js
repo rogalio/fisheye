@@ -40,6 +40,7 @@ class Video {
     source.setAttribute("src", `assets/images/${this.video}`);
     source.setAttribute("type", "video/mp4");
     source.setAttribute("tabindex", "2");
+    source.setAttribute("alt", this.title);
     // creer nombre  + coeur
     div2.appendChild(number);
     number.appendChild(like);
